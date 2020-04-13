@@ -3,7 +3,7 @@ FILE=../bins/pcap/sample0.pcap
 CMDS=i
 EXPECT=<<EOF
 fd       6
-file     ../../../bins/pcap/sample0.pcap
+file     ../bins/pcap/sample0.pcap
 size     0xd4b64
 humansz  850.8K
 mode     -r--
@@ -16,7 +16,7 @@ EOF
 RUN
 
 NAME="pcap file header"
-FILE=../bins/pcap/sample0.pcap
+FILE=bins/pcap/sample0.pcap
 CMDS=pd 1
 EXPECT=<<EOF
             ;-- tcpdump capture file - version 2.4 (Ethernet, capture length 262144):
@@ -25,7 +25,7 @@ EOF
 RUN
 
 NAME="pcap frame header"
-FILE=../bins/pcap/sample0.pcap
+FILE=bins/pcap/sample0.pcap
 CMDS=<<EOF
 s 0x18
 pd 1
@@ -37,7 +37,7 @@ EOF
 RUN
 
 NAME="pcap ethernet header"
-FILE=../bins/pcap/sample0.pcap
+FILE=bins/pcap/sample0.pcap
 CMDS=<<EOF
 s 0x28
 pd 1
@@ -49,7 +49,7 @@ EOF
 RUN
 
 NAME="pcap ipv4 header"
-FILE=../bins/pcap/sample0.pcap
+FILE=bins/pcap/sample0.pcap
 CMDS=<<EOF
 s 0x36
 pd 1
@@ -61,7 +61,7 @@ EOF
 RUN
 
 NAME="pcap tcp header"
-FILE=../bins/pcap/sample0.pcap
+FILE=bins/pcap/sample0.pcap
 CMDS=<<EOF
 s 0x4a
 pd 1
@@ -73,7 +73,7 @@ EOF
 RUN
 
 NAME="pcap tcp string data"
-FILE=../bins/pcap/sample0.pcap
+FILE=bins/pcap/sample0.pcap
 CMDS=<<EOF
 s 0x3f3
 pd 2

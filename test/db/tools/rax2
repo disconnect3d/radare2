@@ -196,9 +196,9 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cat ../bins/other/admin.txt | rax2 -S
+NAME=cat bins/other/admin.txt | rax2 -S
 FILE=-
-CMDS=!cat ../bins/other/admin.txt | rax2 -S
+CMDS=!cat bins/other/admin.txt | rax2 -S
 EXPECT=<<EOF
 6161646d696e61
 EOF
@@ -280,9 +280,9 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cat ../bins/other/shellcode.c | rax2 sF
+NAME=cat bins/other/shellcode.c | rax2 sF
 FILE=-
-CMDS=!cat ../bins/other/shellcode.c | rax2 -F
+CMDS=!cat bins/other/shellcode.c | rax2 -F
 EXPECT=<<EOF
 31c050686e2f7368682f2f626989e35089e25389e1b00bcd80
 EOF
@@ -304,9 +304,9 @@ EXPECT=<<EOF
 EOF
 RUN
 
-NAME=cat ../bins/other/shellcode.py | rax2 sF
+NAME=cat bins/other/shellcode.py | rax2 sF
 FILE=-
-CMDS=!cat ../bins/other/shellcode.py | rax2 -F
+CMDS=!cat bins/other/shellcode.py | rax2 -F
 EXPECT=<<EOF
 31c050686e2f7368682f2f626989e35089e25389e1b00bcd80
 EOF

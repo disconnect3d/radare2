@@ -1,7 +1,7 @@
 NAME=idp flags
 FILE=bins/pdb/SimplePDB.exe
 CMDS=<<EOF
-idp ../bins/pdb/SimplePDB.pdb
+idp bins/pdb/SimplePDB.pdb
 fi 1 @ 0x00401000
 fi 1 @ 0x00401010
 EOF
@@ -16,7 +16,7 @@ NAME=idp bin state bug (#9441)
 FILE=bins/pdb/SimplePDB.exe
 CMDS=<<EOF
 e asm.bits
-idpi ../bins/pdb/SimplePDB.pdb~SomeCoolFunction
+idpi bins/pdb/SimplePDB.pdb~SomeCoolFunction
 e asm.bits
 EOF
 EXPECT=<<EOF

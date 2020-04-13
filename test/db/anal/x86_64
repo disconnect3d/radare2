@@ -1433,7 +1433,7 @@ EOF
 RUN
 
 NAME=Function definition indirect calls
-FILE=.../bins/pe/msvcfindmain.exe
+FILE=bins/pe/msvcfindmain.exe
 BROKEN=1
 CMDS=<<EOF
 aaa

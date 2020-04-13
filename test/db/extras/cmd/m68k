@@ -135,7 +135,7 @@ EOF
 RUN
 
 NAME="m68k: m68k symbolic labels"
-FILE=../bins/smd/LiquidSpaceDodgerV3.bin
+FILE=bins/smd/LiquidSpaceDodgerV3.bin
 CMDS=<<EOF
 e asm.arch=m68k
 s 0x21a

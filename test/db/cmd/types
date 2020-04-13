@@ -93,7 +93,7 @@ CMDS=<<EOF
 e asm.lines.bb = false
 aa
 s sym.Java_com_app_ndh_NDHActivity_print
-to ../bins/headers/jni.h
+to bins/headers/jni.h
 tl JNINativeInterface = 0x464c457f
 pdf~JNINativeInterface
 pdr~JNI?
@@ -309,14 +309,14 @@ RUN
 NAME=to error.h
 FILE=-
 CMDS=<<EOF
-to ../bins/other/error.h
+to bins/other/error.h
 t~char,double,float,int,long,short,size,uid,void # basic universal types
 t~addr,date,dox,name
 ts~addr,date,dox,name
 t addr
 EOF
 EXPECT_ERR=<<EOF
-../bins/other/error.h:2: warning: #error your compiler doesn't have support to my API
+bins/other/error.h:2: warning: #error your compiler doesn't have support to my API
 EOF
 EXPECT=<<EOF
 char
@@ -356,7 +356,7 @@ RUN
 NAME=to test.h
 FILE=-
 CMDS=<<EOF
-to ../bins/other/test.h
+to bins/other/test.h
 t~char,double,float,int,long,short,size,uid,void # basic universal types
 ts~addr,date,dox,name
 t addr
@@ -894,7 +894,7 @@ RUN
 NAME=typedef struct
 FILE=-
 CMDS=<<EOF
-to ../bins/headers/12272.h
+to bins/headers/12272.h
 ts 0
 ts 1
 ?e ----
@@ -947,13 +947,13 @@ RUN
 NAME=typedef struct double header
 FILE=-
 CMDS=<<EOF
-to ../bins/headers/hdr1.h
-to ../bins/headers/hdr2.h
+to bins/headers/hdr1.h
+to bins/headers/hdr2.h
 ts A
 ts B
 ?e
-to ../bins/headers/hdr1.h
-to ../bins/headers/hdr2.h
+to bins/headers/hdr1.h
+to bins/headers/hdr2.h
 tk~^struct.0,struct.1,struct.2,struct.3
 ?e
 ts~^0,1,2,3,A,B

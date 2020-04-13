@@ -347,10 +347,10 @@ EOF
 RUN
 
 NAME=java summary
-FILE=zip://../bins/java/example.zip::0
+FILE=zip://bins/java/example.zip::0
 CMDS=java summary
 EXPECT=<<EOF
-Summary for zip://../bins/java/example.zip::0:
+Summary for zip://bins/java/example.zip::0:
   Size 0x0:
   Constants  size: 0x275 count: 69:
   Methods    size: 0x24e count: 4:
@@ -361,7 +361,7 @@ EOF
 RUN
 
 NAME=java prototypes a
-FILE=zip://../bins/java/example.zip::0
+FILE=zip://bins/java/example.zip::0
 CMDS=java prototypes a
 EXPECT=<<EOF
 import java.lang.Object;
@@ -389,7 +389,7 @@ EOF
 RUN
 
 NAME=java m_info s
-FILE=zip://../bins/java/example.zip::0
+FILE=zip://bins/java/example.zip::0
 CMDS=<<EOF
 s 0x312
 java m_info s
@@ -433,7 +433,7 @@ EOF
 RUN
 
 NAME=java f_info s
-FILE=zip://../bins/java/example.zip::0
+FILE=zip://bins/java/example.zip::0
 CMDS=java f_info s
 EXPECT=<<EOF
 Field Summary Information:

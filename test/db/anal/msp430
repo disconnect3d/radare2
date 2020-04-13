@@ -55,9 +55,9 @@ RUN
 
 NAME=aFr on same but ihex and .r2 script
 BROKEN=1
-FILE=ihex://../bins/microcorruption/tutorial
+FILE=ihex://bins/microcorruption/tutorial
 CMDS=<<EOF
-. ../bins/microcorruption/tutorial.r2
+. bins/microcorruption/tutorial.r2
 s main
 aFr
 pif

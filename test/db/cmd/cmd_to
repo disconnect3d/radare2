@@ -1,6 +1,6 @@
 NAME=to
 FILE=-
-CMDS=to ../bins/headers/s1.h;t S1
+CMDS=to bins/headers/s1.h;t S1
 EXPECT=<<EOF
 pf ddd x y z
 EOF
@@ -8,7 +8,7 @@ RUN
 
 NAME=to
 FILE=-
-CMDS=to ../bins/headers/s2.h; t S1
+CMDS=to bins/headers/s2.h; t S1
 EXPECT=<<EOF
 pf ddd x test z
 EOF
@@ -16,7 +16,7 @@ RUN
 
 NAME=to
 FILE=-
-CMDS=to ../bins/headers/s1.h; to ../bins/headers/s2.h; t S1
+CMDS=to bins/headers/s1.h; to bins/headers/s2.h; t S1
 EXPECT=<<EOF
 pf ddd x test z
 EOF
@@ -24,7 +24,7 @@ RUN
 
 NAME=to perturbated
 FILE=-
-CMDS=to ../bins/headers/s1.h; to ../bins/headers/s4.h; t S1
+CMDS=to bins/headers/s1.h; to bins/headers/s4.h; t S1
 EXPECT=<<EOF
 pf ddd x test z
 EOF
@@ -33,7 +33,7 @@ RUN
 NAME=to arrays
 FILE=-
 CMDS=<<EOF
-to ../bins/headers/s3.h
+to bins/headers/s3.h
 t S1
 tk S1
 tk struct.S1
@@ -54,7 +54,7 @@ RUN
 NAME=to typedefs
 FILE=-
 CMDS=<<EOF
-to ../bins/headers/t1.h
+to bins/headers/t1.h
 tk~easy,humans,days,tokyo,dangerous
 EOF
 EXPECT=<<EOF

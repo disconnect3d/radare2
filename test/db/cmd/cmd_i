@@ -4235,7 +4235,7 @@ NAME=it2
 FILE=--
 CMDS=<<EOF
 mkdir .tmp
-cp ../bins/mach0/fatmach0-3true .tmp/it2-modfile
+cp bins/mach0/fatmach0-3true .tmp/it2-modfile
 o .tmp/it2-modfile
 oo+
 it

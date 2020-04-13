@@ -47,7 +47,7 @@ NAME=java classes summary
 FILE=bins/java/DemoTest.class
 CMDS=java summary
 EXPECT=<<EOF
-Summary for ../bins/java/DemoTest.class:
+Summary for bins/java/DemoTest.class:
   Size 0x0:
   Constants  size: 0x166 count: 34:
   Methods    size: 0xb6 count: 4:

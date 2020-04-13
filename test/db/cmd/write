@@ -15,7 +15,7 @@ NAME=wen 3 writable bin
 FILE=--
 CMDS=<<EOF
 mkdir .tmp
-cp ../bins/mach0/mac-ls2 .tmp/ls-wen
+cp bins/mach0/mac-ls2 .tmp/ls-wen
 o .tmp/ls-wen
 r
 wen 3
@@ -65,7 +65,7 @@ BROKEN=1
 CMDS=<<EOF
 e asm.arch=x86
 e asm.bits=32
-waf ../bins/other/asm/multiline_prefix.asm
+waf bins/other/asm/multiline_prefix.asm
 p8 7@0
 EOF
 EXPECT=<<EOF
@@ -206,7 +206,7 @@ RUN
 NAME=wxf
 FILE=malloc://1024
 CMDS=<<EOF
-wxf ../bins/other/hexpairs
+wxf bins/other/hexpairs
 p8 4
 EOF
 EXPECT=<<EOF
@@ -238,7 +238,7 @@ RUN
 # see bug #503
 NAME=wt
 FILE=-
-#../bins/pe/b.exe
+#bins/pe/b.exe
 CMDS=<<EOF
 wt a_piece_of_ls_saved_to_PWD 0x400
 ls -l a_piece_of_ls_saved_to_PWD~[3]
@@ -306,8 +306,8 @@ BROKEN=1
 CMDS=<<EOF
 !rm -rf .tmp
 mkdir .tmp
-cp -f ../bins/pe/b.exe .tmp/.b.exe.orig
-cp -f ../bins/pe/b.exe .tmp/.b.exe.new
+cp -f bins/pe/b.exe .tmp/.b.exe.orig
+cp -f bins/pe/b.exe .tmp/.b.exe.new
 e io.cache=true
 o+ .tmp/.b.exe.new
 wx ff
@@ -396,7 +396,7 @@ RUN
 NAME=wen should insert X null bytes even if io.cache=false
 FILE=--
 CMDS=<<EOF
-cp ../bins/pe/b.exe .b.exe
+cp bins/pe/b.exe .b.exe
 o+ .b.exe
 r
 s 0x200

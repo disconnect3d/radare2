@@ -655,7 +655,7 @@ NAME=rabin2 -x pemixed.exe
 BROKEN=1
 FILE=bins/pe/pemixed.exe
 CMDS=<<EOF
-!rabin2 -x ../bins/pe/pemixed.exe
+!rabin2 -x bins/pe/pemixed.exe
 !rm -r pemixed.exe.fat
 EOF
 EXPECT=<<EOF

@@ -690,7 +690,7 @@ RUN
 
 NAME=aa ; zfs libc-v7.sig
 FILE=bins/elf/analysis/pid_stripped
-CMDS=aa ; zfs ../bins/other/sigs/libc-v7.sig
+CMDS=aa ; zfs bins/other/sigs/libc-v7.sig
 EXPECT=<<EOF
 Found flirt.__libc_start_main
 EOF
@@ -698,7 +698,7 @@ RUN
 
 NAME=zfd libc-v7.sig
 FILE=bins/elf/analysis/pid_stripped
-CMDS=zfd ../bins/other/sigs/libc-v7.sig
+CMDS=zfd bins/other/sigs/libc-v7.sig
 EXPECT=<<EOF
 41564155B8........4154554D89C4534889CD4D89CD4881EC900000004885C0:
  0. 16 D2A2 0298 0000:__libc_start_main
@@ -707,7 +707,7 @@ RUN
 
 NAME=af ; af ; zfs libc-v7.sig
 FILE=bins/elf/analysis/pid_stripped
-CMDS=s 0x4e2420 ; af ; s 0x4e25c7 ; af ; zfs ../bins/other/sigs/libc-v7.sig ; afl ~4e2420
+CMDS=s 0x4e2420 ; af ; s 0x4e25c7 ; af ; zfs bins/other/sigs/libc-v7.sig ; afl ~4e2420
 EXPECT=<<EOF
 0x004e2420   40 664          flirt.__libc_start_main
 EOF
@@ -715,7 +715,7 @@ RUN
 
 NAME=aa ; zfs libc-v10.sig
 FILE=bins/elf/analysis/pid_stripped
-CMDS=aa ; zfs ../bins/other/sigs/libc-v10.sig
+CMDS=aa ; zfs bins/other/sigs/libc-v10.sig
 EXPECT=<<EOF
 Found flirt.__libc_start_main
 EOF
@@ -723,7 +723,7 @@ RUN
 
 NAME=zfd libc-v10.sig
 FILE=bins/elf/analysis/pid_stripped
-CMDS=zfd ../bins/other/sigs/libc-v10.sig
+CMDS=zfd bins/other/sigs/libc-v10.sig
 EXPECT=<<EOF
 41564155B8........4154554D89C4534889CD4D89CD4881EC900000004885C0:
  0. 16 D2A2 0298 0000:__libc_start_main
@@ -732,7 +732,7 @@ RUN
 
 NAME=af ; af ; zfs libc-v10.sig
 FILE=bins/elf/analysis/pid_stripped
-CMDS=s 0x4e2420 ; af ; s 0x4e25c7 ; af ; zfs ../bins/other/sigs/libc-v10.sig ; afl ~4e2420
+CMDS=s 0x4e2420 ; af ; s 0x4e25c7 ; af ; zfs bins/other/sigs/libc-v10.sig ; afl ~4e2420
 EXPECT=<<EOF
 0x004e2420   40 664          flirt.__libc_start_main
 EOF
@@ -742,7 +742,7 @@ NAME=zfs on static glibc
 FILE=bins/elf/static-glibc-2.27
 CMDS=<<EOF
 aac
-zfs ../bins/other/sigs/libc6_2.27-3ubuntu1_amd64.sig~silence
+zfs bins/other/sigs/libc6_2.27-3ubuntu1_amd64.sig~silence
 f@F:flirt
 EOF
 EXPECT=<<EOF
