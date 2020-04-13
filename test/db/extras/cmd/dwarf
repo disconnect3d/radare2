@@ -1,8 +1,8 @@
 NAME="dwarf: idd and idda"
-FILE=../bins/elf/bomb
+FILE=bins/elf/bomb
 CMDS=<<EOF
 e io.cache = 1
-iddi ../../bins/elf/bomb
+iddi bins/elf/bomb
 wx 900d400000000000b00d400000000000
 idd _IO_marker
 idd _IO_marker._pos
@@ -18,10 +18,10 @@ EOF
 RUN
 
 NAME="dwarf: iddv"
-FILE=../bins/elf/bomb
+FILE=bins/elf/bomb
 CMDS=<<EOF
 e io.cache = 1
-iddi ../../bins/elf/bomb
+iddi bins/elf/bomb
 wx 900d400000000000b00d400000000000
 iddv _IO_marker._sbuf._flags
 EOF
@@ -32,7 +32,7 @@ RUN
 
 NAME="dwarf: iddlf"
 CMDS=<<EOF
-iddi ../../bins/elf/bomb
+iddi bins/elf/bomb
 iddlf
 EOF
 EXPECT=<<EOF
@@ -42,7 +42,7 @@ RUN
 
 NAME="dwarf: iddlg"
 CMDS=<<EOF
-iddi ../../bins/elf/analysis/pie
+iddi bins/elf/analysis/pie
 iddlg
 EOF
 EXPECT=<<EOF
@@ -52,7 +52,7 @@ RUN
 
 NAME="dwarf: iddd -- without array"
 CMDS=<<EOF
-iddi ../../bins/elf/bomb
+iddi bins/elf/bomb
 iddd _IO_marker
 EOF
 EXPECT=<<EOF
@@ -66,7 +66,7 @@ RUN
 
 NAME="dwarf: iddt"
 CMDS=<<EOF
-iddi ../../bins/elf/bomb
+iddi bins/elf/bomb
 iddt _IO_marker._sbuf
 iddt _IO_marker._pos
 EOF
@@ -80,7 +80,7 @@ RUN
 
 NAME="dwarf: iddd -- array"
 CMDS=<<EOF
-iddi ../../bins/elf/ezpz
+iddi bins/elf/ezpz
 iddd _IO_FILE
 EOF
 EXPECT=<<EOF
@@ -120,7 +120,7 @@ RUN
 
 NAME="dwarf: idddj"
 CMDS=<<EOF
-iddi ../../bins/elf/ezpz
+iddi bins/elf/ezpz
 idddj _IO_FILE
 EOF
 EXPECT=<<EOF

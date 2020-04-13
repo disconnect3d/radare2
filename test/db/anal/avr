@@ -37,7 +37,7 @@ EOF
 RUN
 
 NAME=avr DISasm: negative baddr
-FILE=../bins/elf/analysis/bugurtos-avr.elf
+FILE=bins/elf/analysis/bugurtos-avr.elf
 BROKEN=1
 CMDS=<<EOF
 s 0x506

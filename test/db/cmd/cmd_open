@@ -16,7 +16,7 @@ FILE=bins/mach0/mac-ls2
 ARGS=-B0x50000
 CMDS=<<EOF
 s
-o ../bins/mach0/mac-ls
+o bins/mach0/mac-ls
 s
 obb 0
 s
@@ -244,7 +244,7 @@ FILE=bins/elf/libmagic.so
 CMDS=<<EOF
 isq~?
 e scr.null=true
-o ../bins/elf/true32
+o bins/elf/true32
 e scr.null=false
 isq~?
 # raise back
@@ -260,9 +260,9 @@ RUN
 
 NAME=ob 0 fix
 FILE=<<EOF
-../bins/elf/_Exit (42)
-../bins/elf/libverifyPass.so
-../bins/elf/libc.so.6
+bins/elf/_Exit (42)
+bins/elf/libverifyPass.so
+bins/elf/libc.so.6
 EOF
 CMDS=<<EOF
 ob~[0-1]
@@ -325,7 +325,7 @@ RUN
 NAME=o+ writable maps fix
 FILE=--
 CMDS=<<EOF
-o+ ../bins/elf/ls
+o+ bins/elf/ls
 om
 # Possible parallelism problem
 # ?e
@@ -379,7 +379,7 @@ i
 EOF
 EXPECT=<<EOF
 fd       3
-file     ../bins/elf/true32
+file     bins/elf/true32
 size     0x560c
 humansz  21.5K
 mode     r-x

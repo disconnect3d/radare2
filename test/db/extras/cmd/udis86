@@ -1,5 +1,5 @@
 NAME=String udis86
-FILE=../bins/elf/analysis/main
+FILE=bins/elf/analysis/main
 CMDS=<<EOF
 e asm.arch = x86.udis
 e asm.arch=x86
@@ -79,7 +79,7 @@ EOF
 RUN
 
 NAME="axt udis86"
-FILE=../bins/elf/analysis/main
+FILE=bins/elf/analysis/main
 CMDS=<<EOF
 e asm.arch = x86.udis
 e anal.arch = x86.udis
@@ -94,7 +94,7 @@ EOF
 RUN
 
 NAME="axt udis86: IOLI0"
-FILE=../bins/elf/ioli/crackme0x00
+FILE=bins/elf/ioli/crackme0x00
 CMDS=<<EOF
 e asm.arch = x86.udis
 e anal.arch = x86.udis
@@ -110,7 +110,7 @@ RUN
 
 NAME="axf string ref udis86"
 BROKEN=1
-FILE=../bins/elf/ioli/crackme0x03
+FILE=bins/elf/ioli/crackme0x03
 CMDS=<<EOF
 e asm.arch = x86.udis
 e anal.arch = x86.udis

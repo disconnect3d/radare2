@@ -297,7 +297,7 @@ RUN
 
 NAME=rasm2  dissassemble ARM32 binary file
 FILE=-
-CMDS=!rasm2 -DB -a arm -o 0x200 -b 32 -f ../bins/other/rasm2/testARM32.bin
+CMDS=!rasm2 -DB -a arm -o 0x200 -b 32 -f bins/other/rasm2/testARM32.bin
 EXPECT=<<EOF
 0x00000200   4                 4661b0e1  asrs r6, r6, 2
 0x00000204   4                 f087bd08  popeq {r4, r5, r6, r7, r8, sb, sl, pc}
@@ -314,7 +314,7 @@ RUN
 
 NAME=rasm2  dissassemble ARM32 binary file with skip
 FILE=-
-CMDS=!rasm2 -DB -a arm -o 0x200 -b 32 -f ../bins/other/rasm2/testARM32.bin -i 4
+CMDS=!rasm2 -DB -a arm -o 0x200 -b 32 -f bins/other/rasm2/testARM32.bin -i 4
 EXPECT=<<EOF
 0x00000200   4                 f087bd08  popeq {r4, r5, r6, r7, r8, sb, sl, pc}
 0x00000204   4                 0040a0e3  mov r4, 0
@@ -346,7 +346,7 @@ RUN
 
 NAME=rasm2  SPP include directive
 FILE=-
-CMDS=!rasm2 -a x86 -b 32 -p -f ../bins/other/rasm2/asm/include.asm
+CMDS=!rasm2 -a x86 -b 32 -p -f bins/other/rasm2/asm/include.asm
 EXPECT=<<EOF
 9083e803bb00000000cd80c3
 EOF
@@ -354,7 +354,7 @@ RUN
 
 NAME=rasm2  SPP nested conditionals
 FILE=-
-CMDS=!rasm2 -a x86 -b 32 -p -f ../bins/other/rasm2/asm/nest.asm
+CMDS=!rasm2 -a x86 -b 32 -p -f bins/other/rasm2/asm/nest.asm
 EXPECT=<<EOF
 83c10283e90583c301b90200000090
 EOF
@@ -366,7 +366,7 @@ RUN
 
 NAME=rasm2 x86.asm.32
 FILE=-
-CMDS=!rasm2 -f ../bins/elf/analysis/hello.asm
+CMDS=!rasm2 -f bins/elf/analysis/hello.asm
 EXPECT=<<EOF
 ba0e000000b91d000000bb01000000b804000000cd80b801000000cd8048656c6c6f2c20776f726c64210a00
 EOF

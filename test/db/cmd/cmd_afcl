@@ -14,7 +14,7 @@ EOF
 RUN
 
 NAME=afcl: x86-64-override
-FILE=/../bins/elf/true32
+FILE=bins/elf/true32
 ARGS=-a x86 -b 64
 BROKEN=1
 CMDS=afcl
@@ -45,7 +45,7 @@ EOF
 RUN
 
 NAME=afcl: x86-32-override
-FILE=/../bins/elf/bomb
+FILE=bins/elf/bomb
 ARGS=-a x86 -b 32
 BROKEN=1
 CMDS=afcl
@@ -76,7 +76,7 @@ EOF
 RUN
 
 NAME=afcl: arm-64-override
-FILE=/../bins/elf/libmagic.so
+FILE=bins/elf/libmagic.so
 ARGS=-a arm -b 64
 BROKEN=1
 CMDS=afcl
@@ -100,7 +100,7 @@ EOF
 RUN
 
 NAME=afcl: arm-32-override
-FILE=/../bins/elf/libc.so.6
+FILE=bins/elf/libc.so.6
 ARGS=-a arm -b 32
 BROKEN=1
 CMDS=afcl
@@ -124,7 +124,7 @@ EOF
 RUN
 
 NAME=afcl: arm-16-override
-FILE=/../bins/elf/libmagic.so
+FILE=bins/elf/libmagic.so
 ARGS=-a arm -b 16
 BROKEN=1
 CMDS=afcl

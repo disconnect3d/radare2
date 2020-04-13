@@ -15,7 +15,7 @@ EOF
 RUN
 
 NAME=ELF: ld-uclibc
-FILE=../bins/elf/ld-uClibc-0.9.33.2.so
+FILE=bins/elf/ld-uClibc-0.9.33.2.so
 CMDS=<<EOF
 ii
 iij

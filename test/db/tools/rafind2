@@ -1,6 +1,6 @@
 NAME=rafind2 -X -s
 FILE=-
-CMDS=!rafind2 -X -s 250382 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -X -s 250382 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 0x58f
 [35m- offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
@@ -14,48 +14,48 @@ RUN
 
 NAME=rafind2 -r -X -s
 FILE=-
-CMDS=!rafind2 -r -X -s 250382 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -r -X -s 250382 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
-f hit0_0 0x0000058f ; ../bins/elf/ioli/crackme0x00
+f hit0_0 0x0000058f ; bins/elf/ioli/crackme0x00
 EOF
 RUN
 
 NAME=rafind2 -f 0x00000000 -t 0x00000590 -r -X -s
 FILE=-
-CMDS=!rafind2 -f 0x00000000 -t 0x00001000 -r -X -s 250382 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -f 0x00000000 -t 0x00001000 -r -X -s 250382 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
-f hit0_0 0x0000058f ; ../bins/elf/ioli/crackme0x00
+f hit0_0 0x0000058f ; bins/elf/ioli/crackme0x00
 EOF
 RUN
 
 NAME=rafind2 -f 0x00010000 -t 0x00020000 -X -s
 FILE=-
-CMDS=!rafind2 -f 0x00010000 -t 0x00020000 -r -X -s 250382 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -f 0x00010000 -t 0x00020000 -r -X -s 250382 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 EOF
 RUN
 
 NAME=rafind2 -r -X -x
 FILE=-
-CMDS=!rafind2 -r -X -x 323530333832 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -r -X -x 323530333832 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
-f hit0_0 0x0000058f ; ../bins/elf/ioli/crackme0x00
+f hit0_0 0x0000058f ; bins/elf/ioli/crackme0x00
 EOF
 RUN
 
 NAME=rafind2 -r -X -x with nibbles masked
 FILE=-
-CMDS=!rafind2 -r -X -x caf.bab. ../bins/java/Hello.class
+CMDS=!rafind2 -r -X -x caf.bab. bins/java/Hello.class
 EXPECT=<<EOF
-f hit0_0 0x00000000 ; ../bins/java/Hello.class
+f hit0_0 0x00000000 ; bins/java/Hello.class
 EOF
 RUN
 
 NAME=rafind2 -r -X -x with bin mask
 FILE=-
-CMDS=!rafind2 -r -X -x caf3bab3 -M fff0fff0 ../bins/java/Hello.class
+CMDS=!rafind2 -r -X -x caf3bab3 -M fff0fff0 bins/java/Hello.class
 EXPECT=<<EOF
-f hit0_0 0x00000000 ; ../bins/java/Hello.class
+f hit0_0 0x00000000 ; bins/java/Hello.class
 EOF
 RUN
 
@@ -85,7 +85,7 @@ RUN
 
 NAME=rafind2 -a
 FILE=-
-CMDS=!rafind2 -a -X -s 250382 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -a -X -s 250382 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 0x58f
 EOF
@@ -94,7 +94,7 @@ RUN
 NAME=rafind2 -i
 BROKEN=1
 FILE=-
-CMDS=!!rafind2 -i ../bins/elf/ioli/crackme0x00
+CMDS=!!rafind2 -i bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 0x00000000 1 ELF 32-bit LSB executable, Intel 80386, version 1
 EOF
@@ -103,7 +103,7 @@ RUN
 NAME=rafind2 -m
 BROKEN=1
 FILE=-
-CMDS=!!rafind2 -m ../bins/elf/ioli/crackme0x00
+CMDS=!!rafind2 -m bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 0x00000000 1 ELF 32-bit LSB executable, Intel 80386, version 1
 EOF
@@ -112,7 +112,7 @@ RUN
 NAME=rafind2 -e
 FILE=-
 BROKEN=1
-CMDS=!!rafind2 -e 2503?2 ../bins/elf/ioli/crackme0x00
+CMDS=!!rafind2 -e 2503?2 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 0x58f
 [35m- offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
@@ -127,7 +127,7 @@ RUN
 NAME=rafind2 -E 
 FILE=-
 BROKEN=1
-CMDS=!rafind2 -E "134513440,eip,4,esp,-=,esp,=[],eip,=" ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -E "134513440,eip,4,esp,-=,esp,=[],eip,=" bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 1
 EOF
@@ -135,7 +135,7 @@ RUN
 
 NAME=rafind2 -b 0xa
 FILE=-
-CMDS=!rafind2  -a -X -s  250382 -b 0xa ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2  -a -X -s  250382 -b 0xa bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 0x58f
 EOF
@@ -143,14 +143,14 @@ RUN
 
 NAME=rafind2 -a -b 0x3
 FILE=-
-CMDS=!rafind2 -X -s 250382 -b 0x3 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -X -s 250382 -b 0x3 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 EOF
 RUN
 
 NAME=rafind2 -q
 FILE=-
-CMDS=!rafind2 -q -s 250382 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -q -s 250382 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 0x58f
 EOF
@@ -158,7 +158,7 @@ RUN
 
 NAME=rafind2 -z 250382
 FILE=-
-CMDS=!rafind2 -z -s 250382 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -z -s 250382 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 0x58f
 EOF
@@ -166,7 +166,7 @@ RUN
 
 NAME=rafind2 -S ascii
 FILE=-
-CMDS=!rafind2 -S wide ../bins/pe/testapp-msvc64.exe
+CMDS=!rafind2 -S wide bins/pe/testapp-msvc64.exe
 EXPECT=<<EOF
 0x1481a
 0x14842
@@ -175,7 +175,7 @@ RUN
 
 NAME=rafind2 -S U+00ff < utf8 < U+10000
 FILE=-
-CMDS=!rafind2 -S واسع ../bins/pe/testapp-msvc64.exe
+CMDS=!rafind2 -S واسع bins/pe/testapp-msvc64.exe
 EXPECT=<<EOF
 0x14864
 EOF
@@ -183,7 +183,7 @@ RUN
 
 NAME=rafind2 -S utf8 >= U+10000
 FILE=-
-CMDS=!rafind2 -S 𐍈 ../bins/elf/strenc
+CMDS=!rafind2 -S 𐍈 bins/elf/strenc
 EXPECT=<<EOF
 0x22ac
 EOF
@@ -191,7 +191,7 @@ RUN
 
 NAME=rafind2 -Z
 FILE=-
-CMDS=!rafind2 -Z -s 250382 ../bins/elf/ioli/crackme0x00
+CMDS=!rafind2 -Z -s 250382 bins/elf/ioli/crackme0x00
 EXPECT=<<EOF
 0x58f 250382
 EOF

@@ -400,7 +400,7 @@ FILE=bins/elf/analysis/guess-number-riscv64
 CMDS=if
 EXPECT=<<EOF
 fd       3
-file     ../bins/elf/analysis/guess-number-riscv64
+file     bins/elf/analysis/guess-number-riscv64
 size     0x9d5a8
 humansz  629.4K
 mode     r-x

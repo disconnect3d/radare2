@@ -1,7 +1,7 @@
 NAME=pm olf
 FILE=bins/elf/ioli/crackme0x00
 ARGS=-n
-CMDS=pm ../bins/src/olf.magic
+CMDS=pm bins/src/olf.magic
 EXPECT=<<EOF
 0x00000000 1 OLF 32-bit
 EOF
@@ -828,7 +828,7 @@ NAME=search by whole file
 FILE=malloc://64
 CMDS=<<EOF
 wx 90 @ 0x10
-/F ../bins/other/radiff2/radiff2_c_2
+/F bins/other/radiff2/radiff2_c_2
 EOF
 EXPECT=<<EOF
 0x00000010 hit0_0 90
@@ -839,7 +839,7 @@ NAME=search by rest of file
 FILE=-
 CMDS=<<EOF
 wx 210a @ 0x10
-/F ../bins/elf/analysis/hello.raw 48
+/F bins/elf/analysis/hello.raw 48
 EOF
 EXPECT=<<EOF
 0x00000010 hit0_0 210a
@@ -850,7 +850,7 @@ NAME=search by rest of file dec/dec
 FILE=-
 CMDS=<<EOF
 wx 0e @ 0x10
-/F ../bins/elf/analysis/hello.raw 1 1
+/F bins/elf/analysis/hello.raw 1 1
 EOF
 EXPECT=<<EOF
 0x00000010 hit0_0 0e
@@ -861,7 +861,7 @@ NAME=search by part of file dec/hex
 FILE=-
 CMDS=<<EOF
 wx 8048 @ 0x10
-/F ../bins/elf/analysis/hello.raw 0x1c 0x2
+/F bins/elf/analysis/hello.raw 0x1c 0x2
 EOF
 EXPECT=<<EOF
 0x00000010 hit0_0 8048
